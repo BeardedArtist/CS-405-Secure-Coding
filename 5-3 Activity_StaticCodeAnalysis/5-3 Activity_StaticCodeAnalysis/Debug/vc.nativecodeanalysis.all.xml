@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\</FILEPATH>
+      <FILENAME>5-3 Activity_StaticCodeAnalysis.cpp</FILENAME>
+      <LINE>42</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'A::x' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>A::{ctor}</FUNCTION>
+    <DECORATED>??0A@@AAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>A::x</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\</FILEPATH>
+      <FILENAME>5-3 Activity_StaticCodeAnalysis.cpp</FILENAME>
+      <LINE>66</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'buf':  the writable size is '40' bytes, but 'count' bytes might be written.</DESCRIPTION>
+    <FUNCTION>work_with_arrays</FUNCTION>
+    <DECORATED>?work_with_arrays@@YAXH@Z</DECORATED>
+    <FUNCLINE>62</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\</FILEPATH>
+        <FILENAME>5-3 Activity_StaticCodeAnalysis.cpp</FILENAME>
+        <LINE>64</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'buf' is an array of 10 elements (40 bytes)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\</FILEPATH>
+        <FILENAME>5-3 Activity_StaticCodeAnalysis.cpp</FILENAME>
+        <LINE>65</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'count' may equal 1000 (Enter this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\</FILEPATH>
+        <FILENAME>5-3 Activity_StaticCodeAnalysis.cpp</FILENAME>
+        <LINE>66</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'buf[1000]', (writable range is 0 to 9)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\</FILEPATH>
+      <FILENAME>5-3 Activity_StaticCodeAnalysis.cpp</FILENAME>
+      <LINE>127</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6282</DEFECTCODE>
+    <DESCRIPTION>Incorrect operator:  assignment of constant in Boolean context. Consider using '==' instead.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>114</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

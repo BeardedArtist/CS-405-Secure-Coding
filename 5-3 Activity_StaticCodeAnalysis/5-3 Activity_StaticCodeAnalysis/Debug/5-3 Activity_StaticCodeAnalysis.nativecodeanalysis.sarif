@@ -1,0 +1,195 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'A::x' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 5,
+                  "endLine": 42,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0A@@AAE@ABV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": [],
+          "properties": {
+            "targetSymbol": "A::x"
+          }
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Buffer overrun while writing to 'buf':  the writable size is '40' bytes, but 'count' bytes might be written."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+                },
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 9,
+                  "endLine": 66,
+                  "endColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?work_with_arrays@@YAXH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+                          },
+                          "region": {
+                            "startLine": 64,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "'buf' is an array of 10 elements (40 bytes)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+                          },
+                          "region": {
+                            "startLine": 65,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "'count' may equal 1000 (Enter this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+                          },
+                          "region": {
+                            "startLine": 66,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Invalid write to 'buf[1000]', (writable range is 0 to 9)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C6282",
+          "message": {
+            "text": "Incorrect operator:  assignment of constant in Boolean context. Consider using '==' instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+                },
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 5,
+                  "endLine": 127,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "main",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.28.29910.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00CDB1C0 -il C:\\Users\\Zaneb\\AppData\\Local\\Temp\\_CL_f47e4ea8ast -typedil -f 5-3 Activity_StaticCodeAnalysis.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1928 -D_MSC_FULL_VER=192829910 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\5-3 Activity_StaticCodeAnalysis.obj -FdDebug\\vc142.pdb -Gd -analyze:projectdirectory C:\\Users\\Zaneb\\source\\repos\\5-3 Activity_StaticCodeAnalysis\\5-3 Activity_StaticCodeAnalysis -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Users\\Zaneb\\source\\repos\\5-3 Activity_StaticCodeAnalysis\\5-3 Activity_StaticCodeAnalysis\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Zaneb/source/repos/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis/5-3 Activity_StaticCodeAnalysis.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "4f270bdd45240129fc789ec5e1fcb7ad"
+          }
+        }
+      ]
+    }
+  ]
+}

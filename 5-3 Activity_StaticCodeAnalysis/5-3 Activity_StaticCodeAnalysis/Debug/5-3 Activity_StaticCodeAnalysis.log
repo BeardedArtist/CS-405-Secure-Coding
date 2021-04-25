@@ -1,0 +1,8 @@
+﻿  5-3 Activity_StaticCodeAnalysis.cpp
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis.cpp(52,1): warning C4297: 'MySpecialType::DontThrow': function assumed not to throw an exception but does
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis.cpp(52,1): message : __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis.cpp(129,5): warning C4806: '==': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+  5-3 Activity_StaticCodeAnalysis.vcxproj -> C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\Debug\5-3 Activity_StaticCodeAnalysis.exe
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis.cpp(42): warning C26495: Variable 'A::x' is uninitialized. Always initialize a member variable (type.6).
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis.cpp(66): warning C6386: Buffer overrun while writing to 'buf':  the writable size is '40' bytes, but 'count' bytes might be written.
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis.cpp(127): warning C6282: Incorrect operator:  assignment of constant in Boolean context. Consider using '==' instead.

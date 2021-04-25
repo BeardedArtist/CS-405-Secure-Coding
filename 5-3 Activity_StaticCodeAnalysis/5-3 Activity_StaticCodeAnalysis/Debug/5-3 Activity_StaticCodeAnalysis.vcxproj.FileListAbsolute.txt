@@ -1,0 +1,2 @@
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\Debug\5-3 Activity_StaticCodeAnalysis.exe.lastcodeanalysissucceeded
+C:\Users\Zaneb\source\repos\5-3 Activity_StaticCodeAnalysis\5-3 Activity_StaticCodeAnalysis\Debug\NativeCodeAnalysis.read.1.tlog

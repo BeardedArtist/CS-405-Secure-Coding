@@ -1,0 +1,4 @@
+﻿  5-2 Activity_EncryptionCoding.cpp
+C:\Users\Zaneb\source\repos\5-2 Activity_EncryptionCoding\5-2 Activity_EncryptionCoding\5-2 Activity_EncryptionCoding.cpp(106,18): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\Zaneb\source\repos\5-2 Activity_EncryptionCoding\5-2 Activity_EncryptionCoding\5-2 Activity_EncryptionCoding.cpp(32): warning C4715: 'TimeStamp': not all control paths return a value
+  5-2 Activity_EncryptionCoding.vcxproj -> C:\Users\Zaneb\source\repos\5-2 Activity_EncryptionCoding\Debug\5-2 Activity_EncryptionCoding.exe
